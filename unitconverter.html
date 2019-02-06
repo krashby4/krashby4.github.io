@@ -13,129 +13,130 @@
         var finalresult;
 // NOTE: Inch converter
         if (fromunits == "inches" && tounits == "feet") {
-          finalresult = x/12 + " " + tounits;
+          finalresult = x + " " + fromunits + " = " + x/12 + " " + tounits;
         } else if (fromunits == "inches" && tounits == "yards") {
-          finalresult = x/36 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/36 + " " + tounits
         } else if (fromunits == "inches" && tounits == "miles") {
-          finalresult = x/63360 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/63360 + " " + tounits
         } else if (fromunits == "inches" && tounits == "millimeters") {
-          finalresult = x/(1/25.4) + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/(1/25.4) + " " + tounits
         } else if (fromunits == "inches" && tounits == "centimeters") {
-          finalresult = x/(1/2.54) + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/(1/2.54) + " " + tounits
         } else if (fromunits == "inches" && tounits == "meters") {
-          finalresult = x/(1/0.0254) + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/(1/0.0254) + " " + tounits
         } else if (fromunits == "inches" && tounits == "kilometers") {
-          finalresult = x/(1/0.0000254) + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/(39370.079) + " " + tounits
 // NOTE: Foot converter
         } else if (fromunits == "feet" && tounits == "inches") {
-          finalresult = x*12 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*12 + " " + tounits
         } else if (fromunits == "feet" && tounits == "yards") {
-          finalresult = x/3 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/3 + " " + tounits
         } else if (fromunits == "feet" && tounits == "miles") {
-          finalresult = x/(5280) + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/(5280) + " " + tounits
         } else if (fromunits == "feet" && tounits == "millimeters") {
-          finalresult = x*304.8 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*304.8 + " " + tounits
         } else if (fromunits == "feet" && tounits == "centimeters") {
-          finalresult = x*30.48 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*30.48 + " " + tounits
         } else if (fromunits == "feet" && tounits == "meters") {
-          finalresult = x*0.3048 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*0.3048 + " " + tounits
         } else if (fromunits == "feet" && tounits == "kilometers") {
-          finalresult = x*0.0003048 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*0.0003048 + " " + tounits
 // NOTE: Yards Converter
         } else if (fromunits == "yards" && tounits == "inches") {
-          finalresult = x*36 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*36 + " " + tounits
         } else if (fromunits == "yards" && tounits == "feet") {
-          finalresult = x*3 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*3 + " " + tounits
         } else if (fromunits == "yards" && tounits == "miles") {
-          finalresult = x*0.000568182 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*0.000568182 + " " + tounits
         } else if (fromunits == "yards" && tounits == "millimeters") {
-          finalresult = x*914.4 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*914.4 + " " + tounits
         } else if (fromunits == "yards" && tounits == "centimeters") {
-          finalresult = x*91.44 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*91.44 + " " + tounits
         } else if (fromunits == "yards" && tounits == "meters") {
-          finalresult = x*0.9144 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*0.9144 + " " + tounits
         } else if (fromunits == "yards" && tounits == "kilometers") {
-          finalresult = x*0.0009144 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*0.0009144 + " " + tounits
 // NOTE: Miles converter
         } else if (fromunits == "miles" && tounits == "inches") {
-          finalresult = x*63360 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*63360 + " " + tounits
         } else if (fromunits == "miles" && tounits == "feet") {
-          finalresult = x*5280 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*5280 + " " + tounits
         } else if (fromunits == "miles" && tounits == "yards") {
-          finalresult = x*1760 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1760 + " " + tounits
         } else if (fromunits == "miles" && tounits == "millimeters") {
-          finalresult = x*1609000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1609000 + " " + tounits
         } else if (fromunits == "miles" && tounits == "centimeters") {
-          finalresult = x*160934.4 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*160934.4 + " " + tounits
         } else if (fromunits == "miles" && tounits == "meters") {
-          finalresult = x*1609.344 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1609.344 + " " + tounits
         } else if (fromunits == "miles" && tounits == "kilometers") {
-          finalresult = x*1.60934 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1.60934 + " " + tounits
 // NOTE: Millimeters converter
         } else if (fromunits == "millimeters" && tounits == "inches") {
-          finalresult = x/25.4 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/25.4 + " " + tounits
         } else if (fromunits == "millimeters" && tounits == "feet") {
-          finalresult = x/304.8 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/304.8 + " " + tounits
         } else if (fromunits == "millimeters" && tounits == "yards") {
-          finalresult = x/914.4 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/914.4 + " " + tounits
         } else if (fromunits == "millimeters" && tounits == "miles") {
-          finalresult = x/1609000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/1609000 + " " + tounits
         } else if (fromunits == "millimeters" && tounits == "centimeters") {
-          finalresult = x*0.1 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*0.1 + " " + tounits
         } else if (fromunits == "millimeters" && tounits == "meters") {
-          finalresult = x/1000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/1000 + " " + tounits
         } else if (fromunits == "millimeters" && tounits == "kilometers") {
-          finalresult = x/1000000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/1000000 + " " + tounits
 // NOTE: Centimeters converter
         } else if (fromunits == "centimeters" && tounits == "inches") {
-          finalresult = x/2.54 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/2.54 + " " + tounits
         } else if (fromunits == "centimeters" && tounits == "feet") {
-          finalresult = x/30.48 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/30.48 + " " + tounits
         } else if (fromunits == "centimeters" && tounits == "yards") {
-          finalresult = x/91.44 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/91.44 + " " + tounits
         } else if (fromunits == "centimeters" && tounits == "miles") {
-          finalresult = x/160934.4 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/160934.4 + " " + tounits
         } else if (fromunits == "centimeters" && tounits == "millimeters") {
-          finalresult = x*10 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*10 + " " + tounits
         } else if (fromunits == "centimeters" && tounits == "meters") {
-          finalresult = x/100 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/100 + " " + tounits
         } else if (fromunits == "centimeters" && tounits == "kilometers") {
-          finalresult = x/100000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/100000 + " " + tounits
 // NOTE: Meters converter
         } else if (fromunits == "meters" && tounits == "inches") {
-          finalresult = x*39.37 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*39.37 + " " + tounits
         } else if (fromunits == "meters" && tounits == "feet") {
-          finalresult = x*3.28084 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*3.28084 + " " + tounits
         } else if (fromunits == "meters" && tounits == "yards") {
-          finalresult = x*1.09361 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1.09361 + " " + tounits
         } else if (fromunits == "meters" && tounits == "miles") {
-          finalresult = x/1609.344 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/1609.344 + " " + tounits
         } else if (fromunits == "meters" && tounits == "millimeters") {
-          finalresult = x*1000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1000 + " " + tounits
         } else if (fromunits == "meters" && tounits == "centimeters") {
-          finalresult = x*100 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*100 + " " + tounits
         } else if (fromunits == "meters" && tounits == "kilometers") {
-          finalresult = x/1000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x/1000 + " " + tounits
 // NOTE: Kilometers converter
         } else if (fromunits == "kilometers" && tounits == "inches") {
-          finalresult = x*39370.079 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*39370.079 + " " + tounits
         } else if (fromunits == "kilometers" && tounits == "feet") {
-          finalresult = x*3280.84 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*3280.84 + " " + tounits
         } else if (fromunits == "kilometers" && tounits == "yards") {
-          finalresult = x*1093.613 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1093.613 + " " + tounits
         } else if (fromunits == "kilometers" && tounits == "miles") {
-          finalresult = x*0.621371 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*0.621371 + " " + tounits
         } else if (fromunits == "kilometers" && tounits == "millimeters") {
-          finalresult = x*1000000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1000000 + " " + tounits
         } else if (fromunits == "kilometers" && tounits == "centimeters") {
-          finalresult = x*100000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*100000 + " " + tounits
         } else if (fromunits == "kilometers" && tounits == "meters") {
-          finalresult = x*1000 + " " + tounits
+          finalresult = x + " " + fromunits + " = " + x*1000 + " " + tounits
         } else if (fromunits == tounits) {
-          finalresult = x + " " + tounits + ", gimme a challenge!"
-        }
+          finalresult = x + " " + fromunits + " = " + x + " " + tounits + ", gimme a challenge!"
+        } else if (fromunits == "" || tounits == "")
+          finalresult = "Define units"
         document.getElementById("convertedresult").innerHTML = finalresult;
-      }
+        }
     </script>
 
     <meta charset="utf-8">
@@ -144,7 +145,6 @@
   </head>
   <body>
 <h1>Length Unit Converter</h1>
-
 
 <!-- This is for the input units dropdown -->
 <div>
@@ -183,7 +183,7 @@
 <br>
 <div>
   <input type="text" id="inputtedvalue">
-  is equal to <p id="convertedresult"></p>
+  <p id="convertedresult"></p>
 </div>
 
 <div>
