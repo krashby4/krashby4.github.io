@@ -185,9 +185,18 @@
   <input type="text" id="inputtedvalue" placeholder="Type here">
   <p id="convertedresult"></p>
 </div>
-
+<!-- This script allows the user to hit Enter in the input box -->
+<script>
+var input = document.getElementById("inputtedvalue");
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    document.getElementById("myBtn").click();
+  }
+});
+</script>
 <div>
-  <button onclick="unitconverter()">CONVERT</button>
+  <button id="myBtn" onclick="unitconverter()">CONVERT</button>
 </div>
   </body>
 </html>
