@@ -50,10 +50,18 @@ select {
   font-size: 16px;
 }
 
+select:focus {
+  background-color: lime;
+}
+
 input {
   background-color: #30aa00;
   border: none;
   font-size: 20px;
+}
+
+input:focus {
+  background-color: lime;
 }
 
 button {
@@ -64,7 +72,11 @@ button {
   transition-duration: 0.4s
 }
 
+button:focus {
+  background-color: lime;
+}
+
 button:hover {
-  background-color: blue;
+  background-color: lime;
   color: black;
 }
