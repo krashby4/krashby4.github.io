@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <!-- Where the script will be placed -->
+    <script type="text/javascript">
+      function unitconverter(x, y) {
+        // NOTE: x is the value put into box
+        var x = document.getElementById("inputtedvalue").value;
+        // NOTE: y is the x variable, just had to be reassigned
+        var fromunits = document.getElementById("unitsfrom").value;
+        var tounits = document.getElementById("unitsto").value;
+        var finalresult;
+// NOTE: Inch converter
+        if (fromunits == "inches" && tounits == "feet") {
+          finalresult = x/12 + " " + tounits;
+        } else if (fromunits == "inches" && tounits == "yards") {
+          finalresult = x/36 + " " + tounits
+        } else if (fromunits == "inches" && tounits == "miles") {
+          finalresult = x/63360 + " " + tounits
+        } else if (fromunits == "inches" && tounits == "millimeters") {
+          finalresult = x/(1/25.4) + " " + tounits
+        } else if (fromunits == "inches" && tounits == "centimeters") {
+          finalresult = x/(1/2.54) + " " + tounits
+        } else if (fromunits == "inches" && tounits == "meters") {
+          finalresult = x/(1/0.0254) + " " + tounits
+        } else if (fromunits == "inches" && tounits == "kilometers") {
+          finalresult = x/(1/0.0000254) + " " + tounits
+// NOTE: Foot converter
+        } else if (fromunits == "feet" && tounits == "inches") {
+          finalresult = x*12 + " " + tounits
+        } else if (fromunits == "feet" && tounits == "yards") {
+          finalresult = x/3 + " " + tounits
+        } else if (fromunits == "feet" && tounits == "miles") {
+          finalresult = x/(5280) + " " + tounits
+        } else if (fromunits == "feet" && tounits == "millimeters") {
+          finalresult = x*304.8 + " " + tounits
+        } else if (fromunits == "feet" && tounits == "centimeters") {
+          finalresult = x*30.48 + " " + tounits
+        } else if (fromunits == "feet" && tounits == "meters") {
+          finalresult = x*0.3048 + " " + tounits
+        } else if (fromunits == "feet" && tounits == "kilometers") {
+          finalresult = x*0.0003048 + " " + tounits
+// NOTE: Yards Converter
+        } else if (fromunits == "yards" && tounits == "inches") {
+          finalresult = x*36 + " " + tounits
+        } else if (fromunits == "yards" && tounits == "feet") {
+          finalresult = x*3 + " " + tounits
+        } else if (fromunits == "yards" && tounits == "miles") {
+          finalresult = x*0.000568182 + " " + tounits
+        } else if (fromunits == "yards" && tounits == "millimeters") {
+          finalresult = x*914.4 + " " + tounits
+        } else if (fromunits == "yards" && tounits == "centimeters") {
+          finalresult = x*91.44 + " " + tounits
+        } else if (fromunits == "yards" && tounits == "meters") {
+          finalresult = x*0.9144 + " " + tounits
+        } else if (fromunits == "yards" && tounits == "kilometers") {
+          finalresult = x*0.0009144 + " " + tounits
+// NOTE: Miles converter
+        } else if (fromunits == "miles" && tounits == "inches") {
+          finalresult = x*63360 + " " + tounits
+        } else if (fromunits == "miles" && tounits == "feet") {
+          finalresult = x*5280 + " " + tounits
+        } else if (fromunits == "miles" && tounits == "yards") {
+          finalresult = x*1760 + " " + tounits
+        } else if (fromunits == "miles" && tounits == "millimeters") {
+          finalresult = x*1609000 + " " + tounits
+        } else if (fromunits == "miles" && tounits == "centimeters") {
+          finalresult = x*160934.4 + " " + tounits
+        } else if (fromunits == "miles" && tounits == "meters") {
+          finalresult = x*1609.344 + " " + tounits
+        } else if (fromunits == "miles" && tounits == "kilometers") {
+          finalresult = x*1.60934 + " " + tounits
+// NOTE: Millimeters converter
+        } else if (fromunits == "millimeters" && tounits == "inches") {
+          finalresult = x/25.4 + " " + tounits
+        } else if (fromunits == "millimeters" && tounits == "feet") {
+          finalresult = x/304.8 + " " + tounits
+        } else if (fromunits == "millimeters" && tounits == "yards") {
+          finalresult = x/914.4 + " " + tounits
+        } else if (fromunits == "millimeters" && tounits == "miles") {
+          finalresult = x/1609000 + " " + tounits
+        } else if (fromunits == "millimeters" && tounits == "centimeters") {
+          finalresult = x*0.1 + " " + tounits
+        } else if (fromunits == "millimeters" && tounits == "meters") {
+          finalresult = x/1000 + " " + tounits
+        } else if (fromunits == "millimeters" && tounits == "kilometers") {
+          finalresult = x/1000000 + " " + tounits
+// NOTE: Centimeters converter
+        } else if (fromunits == "centimeters" && tounits == "inches") {
+          finalresult = x/2.54 + " " + tounits
+        } else if (fromunits == "centimeters" && tounits == "feet") {
+          finalresult = x/30.48 + " " + tounits
+        } else if (fromunits == "centimeters" && tounits == "yards") {
+          finalresult = x/91.44 + " " + tounits
+        } else if (fromunits == "centimeters" && tounits == "miles") {
+          finalresult = x/160934.4 + " " + tounits
+        } else if (fromunits == "centimeters" && tounits == "millimeters") {
+          finalresult = x*10 + " " + tounits
+        } else if (fromunits == "centimeters" && tounits == "meters") {
+          finalresult = x/100 + " " + tounits
+        } else if (fromunits == "centimeters" && tounits == "kilometers") {
+          finalresult = x/100000 + " " + tounits
+// NOTE: Meters converter
+        } else if (fromunits == "meters" && tounits == "inches") {
+          finalresult = x*39.37 + " " + tounits
+        } else if (fromunits == "meters" && tounits == "feet") {
+          finalresult = x*3.28084 + " " + tounits
+        } else if (fromunits == "meters" && tounits == "yards") {
+          finalresult = x*1.09361 + " " + tounits
+        } else if (fromunits == "meters" && tounits == "miles") {
+          finalresult = x/1609.344 + " " + tounits
+        } else if (fromunits == "meters" && tounits == "millimeters") {
+          finalresult = x*1000 + " " + tounits
+        } else if (fromunits == "meters" && tounits == "centimeters") {
+          finalresult = x*100 + " " + tounits
+        } else if (fromunits == "meters" && tounits == "kilometers") {
+          finalresult = x/1000 + " " + tounits
+// NOTE: Kilometers converter
+        } else if (fromunits == "kilometers" && tounits == "inches") {
+          finalresult = x*39370.079 + " " + tounits
+        } else if (fromunits == "kilometers" && tounits == "feet") {
+          finalresult = x*3280.84 + " " + tounits
+        } else if (fromunits == "kilometers" && tounits == "yards") {
+          finalresult = x*1093.613 + " " + tounits
+        } else if (fromunits == "kilometers" && tounits == "miles") {
+          finalresult = x*0.621371 + " " + tounits
+        } else if (fromunits == "kilometers" && tounits == "millimeters") {
+          finalresult = x*1000000 + " " + tounits
+        } else if (fromunits == "kilometers" && tounits == "centimeters") {
+          finalresult = x*100000 + " " + tounits
+        } else if (fromunits == "kilometers" && tounits == "meters") {
+          finalresult = x*1000 + " " + tounits
+        } else if (fromunits == tounits) {
+          finalresult = x + " " + tounits + ", gimme a challenge!"
+        }
+        document.getElementById("convertedresult").innerHTML = finalresult;
+      }
+    </script>
+
+    <meta charset="utf-8">
+    <title>Kyler Ashby's Unit Converter</title>
+    <link rel="stylesheet" href="unitconverter.css">
+  </head>
+  <body>
+<h1>Length Unit Converter</h1>
+
+
+<!-- This is for the input units dropdown -->
+<div>
+<label id="fromlabel">Convert from:</label>
+<select id="unitsfrom">
+  <option id="blank"></option>
+  <option id="inches">inches</option>
+  <option id="feet">feet</option>
+  <option id="yards">yards</option>
+  <option id="miles">miles</option>
+  <option id="millimeters">millimeters</option>
+  <option id="centimeters">centimeters</option>
+  <option id="meters">meters</option>
+  <option id="kilometers">kilometers</option>
+</select>
+</div>
+
+<br>
+
+<!-- This is for the output units dropdown -->
+<div id="tobox">
+<label id="tolabel">To:</label>
+<select id="unitsto">
+  <option id="blank"></option>
+  <option id="inches">inches</option>
+  <option id="feet">feet</option>
+  <option id="yards">yards</option>
+  <option id="miles">miles</option>
+  <option id="millimeters">millimeters</option>
+  <option id="centimeters">centimeters</option>
+  <option id="meters">meters</option>
+  <option id="kilometers">kilometers</option>
+</select>
+</div>
+
+<br>
+<div>
+  <input type="text" id="inputtedvalue">
+  is equal to <p id="convertedresult"></p>
+</div>
+
+<div>
+  <button onclick="unitconverter()">CONVERT</button>
+</div>
+  </body>
+</html>
