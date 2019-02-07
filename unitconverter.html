@@ -144,6 +144,7 @@
     <link rel="stylesheet" href="unitconverter.css">
   </head>
   <body>
+<div class="box" id="box1">
 <h1>Length Unit Converter</h1>
 
 <!-- This is for the input units dropdown -->
@@ -183,7 +184,7 @@
 <br>
 <div>
   <input type="text" id="inputtedvalue" placeholder="Type here">
-  <p id="convertedresult"></p>
+  <p class="convertedresult" id="convertedresult"></p>
 </div>
 <!-- This script allows the user to hit Enter in the input box -->
 <script>
@@ -197,6 +198,7 @@ input.addEventListener("keyup", function(event) {
 </script>
 <div>
   <button id="myBtn" onclick="unitconverter()">CONVERT</button>
+</div>
 </div>
   </body>
 </html>
