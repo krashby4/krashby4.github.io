@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="mapgoogle.css">
+    <meta charset="utf-8">
+    <style media="screen">
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var homeLatLng = {lat: 33.374888, lng: -111.612676};
+        var jrhighltlng = {lat: 33.370610, lng: -111.612806};
+        var highltlng = {lat: 33.370430, lng: -111.617306};
+        var church = {lat: 33.366663, lng: -111.600715};
+        var bang = {lat: 33.289242, lng: -111.259052}
+        var showtime = {lat: 33.385380, lng: -111.681134}
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: homeLatLng
+        });
+
+      var homestring = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Home</h1>'+
+            '<div id="bodyContent">'+
+            "<p>I first started growing up in Gilbert. When I was in 6th grade we moved out to Mesa." +
+            "Had some good times living here. We had a pool, so that's always a plus."
+            ""
+            + '</p>'
+            '</div>'+
+            '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: homestring
+      });
+
+        var marker = new google.maps.Marker({
+          position: homeLatLng,
+          map: map,
+          title: 'Home Sweet Home'
+        });
+        marker.addListener('click', function() {
+                 infowindow.open(map, marker);
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: jrhighltlng,
+          map: map,
+          title: 'Jr High'
+        });
+        var marker3 = new google.maps.Marker({
+          position: highltlng,
+          map: map,
+          title: 'High School'
+        });
+        var marker4 = new google.maps.Marker({
+          position: church,
+          map: map,
+          title: 'Church'
+        });
+        var marker5 = new google.maps.Marker({
+          position: bang,
+          map: map,
+          title: 'Pew Pew'
+        });
+        var marker6 = new google.maps.Marker({
+          position: showtime,
+          map: map,
+          title: "It's showtime!"
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=initMap"
+async defer></script>
+
+  </body>
+</html>
