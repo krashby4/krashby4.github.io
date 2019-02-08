@@ -2,8 +2,48 @@ h1 {
   text-align: center;
   text-decoration: underline;
   font-family: arial;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 p {
   font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.jrhighh1 {
+  background-color: lightgreen;
+}
+
+.jrhighh2 {
+  background-color: lightgreen;
+  color: purple;
+}
+
+.jrhighp {
+  background-color: lightgreen;
+}
+
+.homep, .homeh1 {
+
+}
+
+.highh2, .highp {
+  background-color: #9b0404;
+  color: white;
+}
+
+.highh1 {
+  background-color: #9b0404;
+  color: black;
 }

@@ -30,56 +30,199 @@
           center: homeLatLng
         });
 
+
+
+// NOTE: Home marker and infowindow
       var homestring = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Home</h1>'+
-            '<div id="bodyContent">'+
-            "<p>I first started growing up in Gilbert. When I was in 6th grade we moved out to Mesa." +
-            "Had some good times living here. We had a pool, so that's always a plus."
-            ""
-            + '</p>'
-            '</div>'+
-            '</div>';
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="homeh1">Home</h1>'+
+        '<h2></h2>'+
+        '<div id="bodyContent">'+
+        "<p class='homep'>I first started growing up in Gilbert. When I was in 6th grade we moved out to Mesa." +
+        "Had some good times living here. We had a pool, so that's always a plus."
+        ""
+        + '</p>'
+        '</div>'+
+        '</div>';
 
       var infowindow = new google.maps.InfoWindow({
         content: homestring
       });
+      var homeicon = {
+        url: 'letterA.png',
+        scaledSize: new google.maps.Size(40, 40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(20,20)
+      };
+      var marker = new google.maps.Marker({
+        position: homeLatLng,
+        icon: homeicon,
+        map: map,
+        title: 'Home Sweet Home'
+      });
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
 
-        var marker = new google.maps.Marker({
-          position: homeLatLng,
-          map: map,
-          title: 'Home Sweet Home'
-        });
-        marker.addListener('click', function() {
-                 infowindow.open(map, marker);
-        });
+// NOTE: Jr High marker and infowindow
+      var jrhighstring = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="jrhighh1">Desert Ridge Junior High School</h1>'+
+        '<h2 class="jrhighh2">Go Rattlers!</h2>'+
+        '<div id="bodyContent">'+
+        "<p class='jrhighp'>This is where I went to junior high. Pretty nice living within walking distance." +
+        " Fun fact, burrowing owls made a home underneath the school sign."
+        ""
+        + '</p>'
+        '</div>'+
+        '</div>';
+      var infowindow2 = new google.maps.InfoWindow({
+        content: jrhighstring
+      });
+      var drjhsicon = {
+        url: 'drjhs.png',
+        scaledSize: new google.maps.Size(50, 50),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(25,25)
+      };
+      var marker2 = new google.maps.Marker({
+        position: jrhighltlng,
+        icon: drjhsicon,
+        map: map,
+        title: 'Jr High'
+      });
+      marker2.addListener('click', function() {
+        infowindow2.open(map, marker2);
+      });
 
-        var marker2 = new google.maps.Marker({
-          position: jrhighltlng,
-          map: map,
-          title: 'Jr High'
-        });
-        var marker3 = new google.maps.Marker({
-          position: highltlng,
-          map: map,
-          title: 'High School'
-        });
-        var marker4 = new google.maps.Marker({
-          position: church,
-          map: map,
-          title: 'Church'
-        });
-        var marker5 = new google.maps.Marker({
-          position: bang,
-          map: map,
-          title: 'Pew Pew'
-        });
-        var marker6 = new google.maps.Marker({
-          position: showtime,
-          map: map,
-          title: "It's showtime!"
-        });
+// NOTE: High school marker and infowindow
+      var highstring = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="highh1">Desert Ridge High School</h1>'+
+        '<h2 class="highh2">GO JAGS!</h2>'+
+        '<div id="bodyContent">'+
+        "<p class='highp'>Good ole high school. This is where I really started getting interested in engineering." +
+        " One of the perks of taking the engineering classes here was that we could play Halo on the local network in the engineering lab"
+        ""
+        + '</p>'
+        '</div>'+
+        '</div>';
+      var infowindow3 = new google.maps.InfoWindow({
+        content: highstring
+      });
+      var drhsicon = {
+        url: 'drhs-logo.png',
+        scaledSize: new google.maps.Size(50, 50),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(25,25)
+      };
+      var marker3 = new google.maps.Marker({
+        position: highltlng,
+        icon: drhsicon,
+        map: map,
+        title: 'High School'
+      });
+      marker3.addListener('click', function() {
+        infowindow3.open(map, marker3);
+      });
+
+// NOTE: Church marker and InfoWindow
+      var churchstring = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="churchh1">Church</h1>'+
+        '<h2 class="churchh2"></h2>'+
+        '<div id="bodyContent">'+
+        "<p class='churchp'>This is our current chapel. We've been hopping around over the years." +
+        ""
+        ""
+        + '</p>'
+        '</div>'+
+        '</div>';
+      var infowindow4 = new google.maps.InfoWindow({
+        content: churchstring
+      });
+      var churchicon = {
+        url: 'ldslogo.png',
+        scaledSize: new google.maps.Size(40, 40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(20,20)
+      };
+      var marker4 = new google.maps.Marker({
+        position: church,
+        icon: churchicon,
+        map: map,
+        title: 'Church'
+      });
+      marker4.addListener('click', function() {
+        infowindow4.open(map, marker4);
+      });
+
+// NOTE: Shooting spot marker and InfoWindow
+      var bangstring = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="bangh1">Shooting Spot</h1>'+
+        '<h2 class="bangh2"></h2>'+
+        '<div id="bodyContent">'+
+        "<p class='bangp'>Our favorite spot to go target shooting. Also a neat area for off-roading." +
+        ""
+        ""
+        + '</p>'
+        '</div>'+
+        '</div>';
+      var infowindow5 = new google.maps.InfoWindow({
+        content: bangstring
+      });
+      var bangicon = {
+        url: 'target.png',
+        scaledSize: new google.maps.Size(40, 40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(20,20)
+      };
+      var marker5 = new google.maps.Marker({
+        position: bang,
+        icon: bangicon,
+        map: map,
+        title: 'Pew Pew'
+      });
+      marker5.addListener('click', function() {
+        infowindow5.open(map, marker5);
+      });
+// NOTE: Movie marker and InfoWindow
+      var moviestring = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="movieh1">Harkins Theatre</h1>'+
+        '<h2 class="movieh2"></h2>'+
+        '<div id="bodyContent">'+
+        "<p class='moviep'>Always loved going to the movies. Saw a lot of great films here over the years." +
+        ""
+        ""
+        + '</p>'
+        '</div>'+
+        '</div>';
+      var infowindow6 = new google.maps.InfoWindow({
+        content: moviestring
+      });
+      var movieicon = {
+        url: 'moviecamera.png',
+        scaledSize: new google.maps.Size(20, 30),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(10,15)
+      };
+      var marker6 = new google.maps.Marker({
+        position: showtime,
+        icon: movieicon,
+        map: map,
+        title: "It's showtime!"
+      });
+      marker6.addListener('click', function() {
+        infowindow6.open(map, marker6);
+      });
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=initMap"
