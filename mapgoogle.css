@@ -14,6 +14,20 @@ p {
   padding: 10px;
 }
 
+#heading1, #heading2 {
+  color: navy;
+}
+
+#map {
+  padding: 300px;
+  border-style: ridge;
+  border-color: maroon;
+  border-width: 10px;
+}
+html, body {
+  background-color: grey;
+}
+
 h2 {
   text-align: center;
   padding: 10px;
