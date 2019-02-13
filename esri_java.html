@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ESRI Map</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.27/esri/css/esri.css">
+    <link rel="stylesheet" href="esri_css.css">
+    <script src="https://js.arcgis.com/3.27/"></script>
+    <script type="text/javascript">
+      require([
+        "esri/map",
+        "dojo/domReady!",
+        "esri/symbols/PictureMarkerSymbol",
+        "esri/geometry/Point",
+        "esri/layers/GraphicsLayer",
+        "esri/graphic"
+      ], function(Map, marker, Point, GraphicsLayer, Graphic) {
+        map = new Map("map", {
+          basemap: "hybrid",
+          center: [-111.612691, 33.374892],
+          zoom: 15
+        });
+        map.on("load", function() {
+          var gl1 = new GraphicsLayer();
+          var p = new Point(-111.612691, 33.374892);
+          var pm = new PictureMarkerSymbol('http://www.esri.com/graphics/aexicon.jpg', 100, 100)
+          var g = new Graphic(p, pm);
+          gl.add(g);
+          map.addLayer(gl1);
+        });
+      });
+    </script>
+
+  </head>
+  <body class="claro">
+    <div id="map">
+</div>
+
+  </body>
+</html>
