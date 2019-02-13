@@ -1,41 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>ESRI Map</title>
-    <link rel="stylesheet" href="https://js.arcgis.com/3.27/esri/css/esri.css">
-    <link rel="stylesheet" href="esri_css.css">
-    <script src="https://js.arcgis.com/3.27/"></script>
-    <script type="text/javascript">
-      require([
-        "esri/map",
-        "dojo/domReady!",
-        "esri/symbols/PictureMarkerSymbol",
-        "esri/geometry/Point",
-        "esri/layers/GraphicsLayer",
-        "esri/graphic"
-      ], function(Map, marker, Point, GraphicsLayer, Graphic) {
-        map = new Map("map", {
-          basemap: "hybrid",
-          center: [-111.612691, 33.374892],
-          zoom: 15
-        });
-        map.on("load", function() {
-          var gl1 = new GraphicsLayer();
-          var p = new Point(-111.612691, 33.374892);
-          var pm = new PictureMarkerSymbol('http://www.esri.com/graphics/aexicon.jpg', 100, 100)
-          var g = new Graphic(p, pm);
-          gl.add(g);
-          map.addLayer(gl1);
-        });
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>ESRI Map</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.10/"></script>
+  <link rel="stylesheet" href=esri_css.css>
+
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/Graphic"
+    ], function(
+      Map, MapView, Graphic
+    ) {
+
+      var map = new Map({
+        basemap: "streets-night-vector"
       });
-    </script>
 
-  </head>
-  <body class="claro">
-    <div id="map">
-</div>
+      var view = new MapView({
+        center: [-111.612669, 33.374902],
+        container: "viewDiv",
+        map: map,
+        zoom: 1
+      });
 
-  </body>
+      var homepoint = {
+        type: "point",
+        longitude: -111.612669,
+        latitude: 33.374902
+      };
+
+      var mparray = [[-1.468609, 52.749273],
+                     [-6.261523, 53.346742],
+                     [144.961667, -37.815868],
+                     [139.732240, 35.708767],
+                     [12.315499, 45.440965],
+                     [-149.901389, 61.217526],
+                     [8.535907, 47.375871],
+                     [-157.858950, 21.306024],
+                     [174.818646, -41.297516,],
+                     [-0.879013, 49.372433]]
+      ;
+      var sms = {
+        type: "simple-marker",
+        color: "cyan",
+        size: 8
+      };
+
+//Ashby-de-la-Zouch
+      var ashby = {
+        type: "multipoint",
+        points: mparray[0]
+      };
+      var ashbystring = "Lots of my ancestors came from England. This town could be the origin of my surname.";
+      var ashbygraphic = new Graphic({
+        geometry: ashby,
+        symbol: sms,
+        popupTemplate: {
+          title: "Ashby-de-la-Zouch",
+          content: ashbystring,
+        }
+      });
+
+//Home marker
+      var markerSymbol = {
+        type: "picture-marker",
+        url: "letterA.png",
+        width: "40px",
+        height: "40px"
+      };
+
+      var homestring = "My good ole' home back in Mesa, Arizona.";
+      var pointGraphic = new Graphic({
+        geometry: homepoint,
+        symbol: markerSymbol,
+        popupTemplate: {
+          title: "Home Sweet Home",
+          content: homestring
+        }
+      });
+
+      view.graphics.add(pointGraphic);
+      view.graphics.add(ashbygraphic);
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+
 </html>

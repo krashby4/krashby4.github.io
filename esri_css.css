@@ -1,20 +1,16 @@
-html, body, #map {
-  height: 100%;
-  padding: 100;
+html, body, #viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 99%;
 }
 
-body {
-  background-color: lightblue;
-}
-
-#map {
+#viewDiv {
   border-style: ridge;
   border-color: ivory;
   border-width: 8px;
 }
 
-#header1 {
-  text-align: center;
-  font-family: arial;
-  text-decoration: underline;
+body {
+  margin: 5px;
+  background-color: lightblue;
 }
