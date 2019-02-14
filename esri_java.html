@@ -53,19 +53,154 @@
       };
 
 //Ashby-de-la-Zouch
-      var ashby = {
+      var m1 = {
         type: "multipoint",
         points: mparray[0]
       };
-      var ashbystring = "Lots of my ancestors came from England. This town could be the origin of my surname.";
-      var ashbygraphic = new Graphic({
-        geometry: ashby,
+      var m1s = "Lots of my ancestors came from England. This town could be the origin of my surname.";
+      var m1g = new Graphic({
+        geometry: m1,
         symbol: sms,
         popupTemplate: {
-          title: "Ashby-de-la-Zouch",
-          content: ashbystring,
+          title: "Ashby-de-la-Zouch, UK",
+          content: m1s,
         }
       });
+
+//Dublin
+      var m2 = {
+        type: "multipoint",
+        points: mparray[1]
+      };
+      var m2s = 'Dublin is the subject of a popular Irish song titled "The Rocky Road to Dublin". I think the Ireland would suit me well.' ;
+      var m2g = new Graphic({
+        geometry: m2,
+        symbol: sms,
+        popupTemplate: {
+          title: "Dublin, Ireland",
+          content: m2s,
+        }
+      });
+
+//Melbourne
+      var m3 = {
+        type: "multipoint",
+        points: mparray[2]
+      };
+      var m3s = "I've always had a curious fascination with Australia." ;
+      var m3g = new Graphic({
+        geometry: m3,
+        symbol: sms,
+        popupTemplate: {
+          title: "Melbourne, Australia",
+          content: m3s,
+        }
+      });
+
+//Tokyo, Japan
+      var m4 = {
+        type: "multipoint",
+        points: mparray[3]
+      };
+      var m4s = "Everybody who went seems to love it. Figure I'd go see what all the hooplah is about." ;
+      var m4g = new Graphic({
+        geometry: m4,
+        symbol: sms,
+        popupTemplate: {
+          title: "Tokyo, Japan",
+          content: m4s,
+        }
+      });
+
+//5th marker
+var m5 = {
+  type: "multipoint",
+  points: mparray[4]
+};
+var m5s = "Venice has a storied history, full of culture and life. Plus, one of my favorite video games takes place partly in Venice." ;
+var m5g = new Graphic({
+  geometry: m5,
+  symbol: sms,
+  popupTemplate: {
+    title: "Venice, Italy",
+    content: m5s,
+  }
+});
+
+//6th marker
+var m6 = {
+  type: "multipoint",
+  points: mparray[5]
+};
+var m6s = "From what I've been told, Alaska is one of the few untamed areas in the U.S. I would really like to see that." ;
+var m6g = new Graphic({
+  geometry: m6,
+  symbol: sms,
+  popupTemplate: {
+    title: "Anchorage, Alaska",
+    content: m6s,
+  }
+});
+
+//7th marker
+var m7 = {
+  type: "multipoint",
+  points: mparray[6]
+};
+var m7s = "Eh, why not." ;
+var m7g = new Graphic({
+  geometry: m7,
+  symbol: sms,
+  popupTemplate: {
+    title: "Zurich, Switzerland",
+    content: m7s,
+  }
+});
+
+//8th marker
+var m8 = {
+  type: "multipoint",
+  points: mparray[7]
+};
+var m8s = "I figure I might as well visit, just to say I did." ;
+var m8g = new Graphic({
+  geometry: m8,
+  symbol: sms,
+  popupTemplate: {
+    title: "Honolulu, Hawaii",
+    content: m8s,
+  }
+});
+
+//9th marker
+var m9 = {
+  type: "multipoint",
+  points: mparray[8]
+};
+var m9s = "One ring to rule them all. 'Nuff said." ;
+var m9g = new Graphic({
+  geometry: m9,
+  symbol: sms,
+  popupTemplate: {
+    title: "Wellington, New Zealand",
+    content: m9s,
+  }
+});
+
+//10th marker
+var m10 = {
+  type: "multipoint",
+  points: mparray[9]
+};
+var m10s = "My great uncle served in WWII and he was one of the soldiers who stormed the beaches in Normandy. I'm not sure which, though I think it was Omaha Beach." ;
+var m10g = new Graphic({
+  geometry: m10,
+  symbol: sms,
+  popupTemplate: {
+    title: "Omaha Beach Monument",
+    content: m10s,
+  }
+});
 
 //Home marker
       var markerSymbol = {
@@ -85,13 +220,13 @@
         }
       });
 
-      view.graphics.add(pointGraphic);
-      view.graphics.add(ashbygraphic);
+      view.graphics.addMany([pointGraphic,m1g,m2g,m3g,m4g,m5g,m6g,m7g,m8g,m9g,m10g]);
     });
   </script>
 </head>
 
 <body>
+  <h1>Oh, The Places I'll Never Go</h1>
   <div id="viewDiv"></div>
 </body>
 
