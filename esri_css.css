@@ -6,7 +6,7 @@ html, body, #viewDiv {
 
 #viewDiv {
   border-style: ridge;
-  border-color: cyan;
+  border-color: maroon;
   border-width: 8px;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  color: cyan;
+  color: maroon;
   text-align: center;
   font-family: arial;
   text-decoration: underline;
