@@ -70,7 +70,7 @@ require([
     }
   });
 
-//Melbourne
+//Australia
   var m3 = {
     type: "multipoint",
     points: mparray[2]
@@ -100,7 +100,7 @@ require([
     }
   });
 
-//5th marker
+//Venice
 var m5 = {
 type: "multipoint",
 points: mparray[4]
@@ -115,7 +115,7 @@ content: m5s,
 }
 });
 
-//6th marker
+//Alaska
 var m6 = {
 type: "multipoint",
 points: mparray[5]
@@ -130,7 +130,7 @@ content: m6s,
 }
 });
 
-//7th marker
+//Zurich
 var m7 = {
 type: "multipoint",
 points: mparray[6]
@@ -145,7 +145,7 @@ content: m7s,
 }
 });
 
-//8th marker
+//Hawaii
 var m8 = {
 type: "multipoint",
 points: mparray[7]
@@ -160,7 +160,7 @@ content: m8s,
 }
 });
 
-//9th marker
+//New Zealand
 var m9 = {
 type: "multipoint",
 points: mparray[8]
@@ -175,7 +175,7 @@ content: m9s,
 }
 });
 
-//10th marker
+//Omaha Beach
 var m10 = {
 type: "multipoint",
 points: mparray[9]
