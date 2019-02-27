@@ -1,0 +1,11 @@
+html, body, #viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 95%;
+}
+
+#viewDiv {
+  border-style: ridge;
+  border-color: maroon;
+  border-width: 8px;
+}
