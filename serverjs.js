@@ -21,20 +21,12 @@ require ([
 
   var layer = new MapImageLayer({
     url: "http://geoserver2.byu.edu/arcgis/rest/services/Nerdalicious/HWRaster/MapServer",
-    sublayers: [
-      {
-        id: 0,
-      }
-    ]
+    sublayers: [ {id: 0}]
   });
 
   var soillayer = new MapImageLayer({
     url: "http://geoserver2.byu.edu/arcgis/rest/services/Nerdalicious/HWPublish/MapServer",
-    sublayers: [
-      {
-        id: 0,
-      }
-    ]
+    sublayers: [ {id: 0}]
   });
-  map.addMany([layer,soillayer]); // adds the layer to the map
+  map.add(soillayer); // adds the layer to the map
 });
