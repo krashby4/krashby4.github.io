@@ -29,4 +29,5 @@ require ([
     sublayers: [ {id: 0}]
   });
   map.add(soillayer); // adds the layer to the map
+  map.add(layer);
 });
