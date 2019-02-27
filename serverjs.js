@@ -27,5 +27,14 @@ require ([
       }
     ]
   });
-  map.add(layer); // adds the layer to the map
+
+  var soillayer = new MapImageLayer({
+    url: "http://geoserver2.byu.edu/arcgis/rest/services/Nerdalicious/HWPublish/MapServer",
+    sublayers: [
+      {
+        id: 0,
+      }
+    ]
+  });
+  map.addMany([layer,soillayer]); // adds the layer to the map
 });
