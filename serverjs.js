@@ -2,9 +2,10 @@ require ([
   "esri/Map",
   "esri/views/MapView",
   "esri/Graphic",
-  "esri/layers/MapImageLayer"
+  "esri/layers/MapImageLayer",
+  "esri/layers/support/Sublayer"
 ], function(
-  Map, MapView, Graphic, MapImageLayer
+  Map, MapView, Graphic, MapImageLayer, Sublayer
 ) {
 
   var map = new Map({
