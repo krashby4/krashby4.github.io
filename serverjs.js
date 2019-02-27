@@ -19,7 +19,7 @@ require ([
   });
 
   var layer = new MapImageLayer({
-    url: "http://geoserver2.byu.edu/arcgis/rest/services/Nerdalicious/HWPublish/MapServer"
+    url: "http://geoserver2.byu.edu/arcgis/rest/services/Nerdalicious/HWRaster/MapServer"
   });
   map.add(layer); // adds the layer to the map
 });
