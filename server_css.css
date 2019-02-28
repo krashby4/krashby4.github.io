@@ -2,16 +2,20 @@ html, body, #viewDiv {
   padding: 0;
   margin: 0;
   height: 95%;
-  background-color: #000F1A
-  font-family: arial;
 }
 
 #viewDiv {
   border-style: ridge;
-  border-color: maroon;
+  border-color: grey;
   border-width: 8px;
 }
 
 h1 {
   text-align: center;
+}
+
+body {
+  background-color: #000F1A
+  font-family: arial;
+  color: white;
 }
