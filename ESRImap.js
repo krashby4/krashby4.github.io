@@ -12,9 +12,14 @@ require([
     basemap: "streets-night-vector"
   });
 
-  var basemapToggle = new BasemapToggle({
+  var basemapGallery = new BasemapGallery ({
     view: view,
-    nextBasemap: "hybrid"
+    source: {
+      portal: {
+        url: "http://www.arcgis.com",
+        useVectorBasemaps: true,
+      },
+    }
   });
 
   var view = new MapView({
@@ -216,5 +221,5 @@ content: m10s,
   });
 
   view.graphics.addMany([pointGraphic,m1g,m2g,m3g,m4g,m5g,m6g,m7g,m8g,m9g,m10g]);
-  view.ui.add(basemapToggle,"bottom-right");
+  view.ui.add(basemapGallery,"top-right");
 });
