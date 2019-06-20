@@ -19,6 +19,13 @@ require([
     zoom: 1
   });
 
+  var basemapToggle = new BasemapToggle({
+    view: view,
+    secondMap: "satellite"
+  });
+
+view.ui.add(basemapToggle, "bottom-right");
+
   var homepoint = {
     type: "point",
     longitude: -111.612669,
