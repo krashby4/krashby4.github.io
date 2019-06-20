@@ -10,10 +10,10 @@ require([
 
   var basemapToggle = new BasemapToggle({
     view: view,
-    nextBasemap: "satellite"
+    secondMap: "satellite"
   });
 
-  view.ui.add(basemapToggle, "bottom-right");
+  view.ui.add(basemapToggle,"bottom-right");
 
   var map = new Map({
     basemap: "streets-night-vector"
