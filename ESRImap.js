@@ -17,6 +17,8 @@ require([
     nextBasemap: "satellite"
   });
 
+  view.ui.add(basemapToggle,"bottom-right");
+
   var view = new MapView({
     center: [-111.612669, 33.374902],
     container: "viewDiv",
@@ -216,5 +218,4 @@ content: m10s,
   });
 
   view.graphics.addMany([pointGraphic,m1g,m2g,m3g,m4g,m5g,m6g,m7g,m8g,m9g,m10g]);
-  view.ui.add(basemapToggle,"bottom-right");
 });
