@@ -21,7 +21,7 @@ require([
 
   var basemapToggle = new BasemapToggle({
     view: view,
-    secondMap: "satellite"
+    secondMap: "streets"
   });
 
 view.ui.add(basemapToggle, "bottom-right");
