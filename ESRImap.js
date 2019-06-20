@@ -10,7 +10,7 @@ require([
 
   var basemapToggle = new BasemapToggle({
     view: view,
-    secondMap: "satellite"
+    nextBasemap: "satellite"
   });
 
   var map = new Map({
