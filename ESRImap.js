@@ -8,13 +8,13 @@ require([
   Map, MapView, Graphic, BasemapToggle, BasemapGallery
 ) {
 
+  var map = new Map({
+    basemap: "streets-night-vector"
+  });
+
   var basemapToggle = new BasemapToggle({
     view: view,
     nextBasemap: "satellite"
-  });
-
-  var map = new Map({
-    basemap: "streets-night-vector"
   });
 
   var view = new MapView({
