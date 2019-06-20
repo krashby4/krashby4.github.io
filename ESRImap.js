@@ -14,7 +14,7 @@ require([
 
   var basemapToggle = new BasemapToggle({
     view: view,
-    nextBasemap: "satellite"
+    nextBasemap: "hybrid"
   });
 
   var view = new MapView({
