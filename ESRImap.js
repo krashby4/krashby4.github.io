@@ -1,10 +1,19 @@
 require([
   "esri/Map",
   "esri/views/MapView",
-  "esri/Graphic"
+  "esri/Graphic",
+  "esri/widgets/BasemapToggle",
+  "esri/widgets/BasemapGallery"
 ], function(
-  Map, MapView, Graphic
+  Map, MapView, Graphic, BasemapToggle, BasemapGallery
 ) {
+
+  var basemapToggle = new BasemapToggle({
+    view: view,
+    nextBasemap: "satellite"
+  });
+
+  view.ui.add(basemapToggle, "bottom-right");
 
   var map = new Map({
     basemap: "streets-night-vector"
