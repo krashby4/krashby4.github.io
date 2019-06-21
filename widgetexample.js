@@ -2,8 +2,9 @@ require([
   "esri/Map",
   "esri/views/MapView",
   "esri/widgets/BasemapToggle",
-  "esri/widgets/BasemapGallery"
-], function(Map, MapView, BasemapToggle, BasemapGallery) {
+  "esri/widgets/BasemapGallery",
+  "esri/layers/FeatureLayer"
+], function(Map, MapView, BasemapToggle, BasemapGallery, FeatureLayer) {
 
   var map = new Map({
     basemap: "topo-vector"
@@ -16,12 +17,18 @@ require([
     zoom: 13
   });
 
-       var basemapToggle = new BasemapToggle({
-         view: view,
-         secondMap: "streets"
-       });
+  var basemapToggle = new BasemapToggle({
+    view: view,
+    secondMap: "streets"
+  });
 
-       view.ui.add(basemapToggle,"bottom-right");
+  view.ui.add(basemapToggle,"bottom-right");
+
+  var trailheadsLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0"
+  });
+
+  map.add(trailheadsLayer);
 
 //  var basemapGallery = new BasemapGallery({
   //  view: view,
