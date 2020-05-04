@@ -1,15 +1,15 @@
 var australia_boundary = L.tileLayer.wms("https://geoserver.hydroshare.org/geoserver/wms", {
-      layers: 'HS-9572eb7fa8744807962b9268593bd4ad:australia-geoglows-boundary australia-geoglows-boundary',
+      layers: 'HS-9572eb7fa8744807962b9268593bd4ad:australia-geoglows-catchment australia-geoglows-catchment',
       format: 'image/png',
       transparent: true
 }),
     northamerica_boundary = L.tileLayer.wms("https://geoserver.hydroshare.org/geoserver/wms", {
-      layers: 'HS-43ae93136e10439fbf2530e02156caf0:north_america-geoglows-boundary north_america-geoglows-boundary',
+      layers: '	HS-43ae93136e10439fbf2530e02156caf0:north_america-geoglows-catchment north_america-geoglows-catchment',
       format: 'image/png',
       transparent: true
 }),
     africa_boundary = L.tileLayer.wms("https://geoserver.hydroshare.org/geoserver/wms", {
-      layers: 'HS-121bbce392a841178476001843e7510b:africa-geoglows-boundary africa-geoglows-boundary',
+      layers: 'HS-121bbce392a841178476001843e7510b:africa-geoglows-catchment africa-geoglows-catchment',
       format: 'image/png',
       transparent: true
 });
